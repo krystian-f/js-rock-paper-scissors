@@ -6,6 +6,7 @@
   --hand-bg-clr: hsla(0, 0%, 100%, .8);
   --hand-bg-clr-hover: hsla(0, 0%, 100%, .9);
   --score-text-clr: hsl(30, 80%, 45%);
+  --round-bg-clr: hsl(45, 70%, 50%);
 }
 
 html{
@@ -31,6 +32,7 @@ body{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  gap: 4rem;
 }
 
 .header{
@@ -86,7 +88,6 @@ body{
   gap: 4rem;
   align-items: center;
   justify-content: center;
-  background-color: green;
 }
 
 .game__round-winner{
@@ -106,7 +107,8 @@ body{
 .game__round-hand{
   width: 10rem;
   height: 10rem;
-  background-color: aquamarine;
+  background-color: var(--round-bg-clr);
+  border-radius: 1rem;
 }
 
 .players-wrapper{
