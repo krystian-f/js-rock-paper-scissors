@@ -128,7 +128,7 @@ const newGame = function(){
 
 // Events
 chosenHumanHand.forEach((item) => {
-  item.addEventListener('click', () =>{
+  item.addEventListener('click', () => {
     newGame();
 
     let humanHand = checkHumanHand(item);
