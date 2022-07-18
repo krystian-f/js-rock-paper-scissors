@@ -63,6 +63,10 @@ body{
 }
 
 .game__header{
+  display: none;
+}
+
+.game__header-active{
   width:100%;
   display:flex;
   flex-direction: column;
@@ -72,7 +76,11 @@ body{
 }
 
 .game__match{
-  font-size: 3rem;
+  font-size: 3rem; 
+}
+
+.game-winner{
+  font-weight: 600;
 }
 
 .game__instruction{
