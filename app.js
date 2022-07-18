@@ -10,6 +10,8 @@ const displayComputerScore = document.querySelector('.js-computer__score');
 const chosenHumanHand= document.querySelectorAll('.js-player__hand');
 const gameInstruction = document.querySelector('.js-game__instruction');
 const gameHeaderDisplay = document.querySelector('.game__header');
+const roundDisplay = document.querySelector('.game__round');
+
 // Global
 let humanScore = 0;
 let computerScore = 0;
@@ -64,11 +66,16 @@ const displayRoundScore = function(winner) {
   } else if(winner === 'computer'){
     computerScore += 1;
   }
+
   displayHumanScore.innerHTML = humanScore;
   displayComputerScore.innerHTML = computerScore;
 };
 
 const displayRoundHand = function(human, computer) {
+  if(humanScore !== 0 || computerScore !== 0 ) {
+    roundDisplay.classList.add('game__round--active'); 
+  }  
+
   if(human === 'rock') {
     roundHumanHand.innerHTML = `<img src="img/fist.png" alt="rock" class="player__hand-img">`;
   } else if(human === 'paper') {
@@ -120,7 +127,8 @@ const newGame = function(){
   if(humanScore >= 3 || computerScore >= 3){
     humanScore = 0;
     computerScore = 0; 
-    gameHeaderDisplay.classList.remove('game__header-active');   
+    gameHeaderDisplay.classList.remove('game__header-active'); 
+    roundDisplay.classList.remove('.game__round--active');
   }
 }
 
