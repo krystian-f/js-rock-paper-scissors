@@ -192,6 +192,12 @@ body{
   cursor: pointer;
 }
 
+.player__hand--no-hover:hover{
+  cursor: auto;
+  box-shadow: none;
+  background-color: var(--hand-bg-clr);
+}
+
 .player__hand-img{
   width: 10rem;
   height: 10rem;
