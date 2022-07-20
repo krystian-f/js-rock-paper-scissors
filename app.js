@@ -95,11 +95,11 @@ const displayRoundHand = function(human, computer) {
 
 const displayRoundWinner = function(winner) {
   if(winner === 'human') {
-    roundWinner.innerHTML = `You've won this round`;
+    roundWinner.textContent = `You've won this round`;
   } else if(winner === 'computer') {
-    roundWinner.innerHTML = `Computer have won this round`;
+    roundWinner.textContent = `Computer have won this round`;
   } else if (!winner){
-    roundWinner.innerHTML = `It's a tie`;
+    roundWinner.textContent = `It's a tie`;
   }
 }
 
@@ -117,9 +117,9 @@ const displayWinner = function(winner) {
   }
 
   if(winner === 'human'){
-    gameWinner.innerHTML = 'Human';
+    gameWinner.textContent = 'Human';
   } else if(winner === 'computer') {
-    gameWinner.innerHTML = 'Computer';
+    gameWinner.textContent = 'Computer';
   }
 }
 
