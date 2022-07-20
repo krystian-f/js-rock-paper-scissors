@@ -15,6 +15,10 @@ const roundDisplay = document.querySelector('.game__round');
 // Global
 let humanScore = 0;
 let computerScore = 0;
+const rockImg = `<img src="img/fist.png" alt="rock" class="player__hand-img">`;
+const paperImg = `<img src="img/hand.png" alt="paper" class="player__hand-img">`;
+const scissorsImg =  `<img src="img/scissors.png" alt="scissors" class="player__hand-img">`;
+
 
 // Functions
 const checkHumanHand = function(item) {
@@ -76,20 +80,28 @@ const displayRoundHand = function(human, computer) {
     roundDisplay.classList.add('game__round--active'); 
   }  
 
+  while(roundHumanHand.hasChildNodes()){
+    roundHumanHand.removeChild(roundHumanHand.lastChild);
+  }
+
+  while(roundComputerHand.hasChildNodes()){
+    roundComputerHand.removeChild(roundComputerHand.lastChild);
+  }
+
   if(human === 'rock') {
-    roundHumanHand.innerHTML = `<img src="img/fist.png" alt="rock" class="player__hand-img">`;
+    roundHumanHand.insertAdjacentHTML('beforeend', rockImg);
   } else if(human === 'paper') {
-    roundHumanHand.innerHTML = `<img src="img/hand.png" alt="paper" class="player__hand-img">`;
+    roundHumanHand.insertAdjacentHTML('beforeend', paperImg);
   } else if(human === 'scissors') {
-    roundHumanHand.innerHTML = `<img src="img/scissors.png" alt="scissors" class="player__hand-img">`;
+    roundHumanHand.insertAdjacentHTML('beforeend', scissorsImg);
   }
 
   if(computer === 'rock') {
-    roundComputerHand.innerHTML = `<img src="img/fist.png" alt="rock" class="player__hand-img">`;
+    roundComputerHand.insertAdjacentHTML('beforeend', rockImg);
   } else if(computer === 'paper') {
-    roundComputerHand.innerHTML = `<img src="img/hand.png" alt="paper" class="player__hand-img">`;
+    roundComputerHand.insertAdjacentHTML('beforeend', paperImg);
   } else if(computer === 'scissors') {
-    roundComputerHand.innerHTML = `<img src="img/scissors.png" alt="scissors" class="player__hand-img">`;
+    roundComputerHand.insertAdjacentHTML('beforeend', scissorsImg);
   }
 }
 
