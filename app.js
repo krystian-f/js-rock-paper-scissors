@@ -67,8 +67,8 @@ const displayRoundScore = function(winner) {
     computerScore += 1;
   }
 
-  displayHumanScore.innerHTML = humanScore;
-  displayComputerScore.innerHTML = computerScore;
+  displayHumanScore.textContent = humanScore;
+  displayComputerScore.textContent = computerScore;
 };
 
 const displayRoundHand = function(human, computer) {
